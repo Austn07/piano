@@ -1,15 +1,17 @@
 <style>
 
-	body{background-color: black;}
-	h1{color: purple;
+	body{
+		background-color: #000000;
+		}
+	h1{color: #8cfffb;
       animation: mymove2 4s infinite;}
-    @keyframes mymove2 {50% {color: lime;}
+    @keyframes mymove2 {50% {color: #88001b;}
 	}
-	h2{color: white;}
+	h2{color: purple;}
 	h3{color: cyan;}
 	h4{color: red;}
-	p{color: white;}
-	li{color: white;}
+	p{color: blue;}
+	li{color: yellow;}
 	table{color: cyan;
 
 </style>
