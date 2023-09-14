@@ -1,0 +1,15 @@
+<style>
+
+	body{background-color: black;}
+	h1{color: purple;
+      animation: mymove2 4s infinite;}
+    @keyframes mymove2 {50% {color: lime;}
+	}
+	h2{color: white;}
+	h3{color: cyan;}
+	h4{color: red;}
+	p{color: white;}
+	li{color: white;}
+	table{color: cyan;
+
+</style>
