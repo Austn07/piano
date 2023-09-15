@@ -3,23 +3,7 @@
 <head>
   <title>Ap2's Keyboard Piano!</title>
   <link href='./styles.css' rel='stylesheet'>
-  <script>
-  // Function to play audio when a button is clicked
-  function playAudio(buttonId) {
-    const audio = document.getElementById(buttonId);
-    audio.currentTime = 0; // Reset audio to the beginning in case it's already playing
-    audio.play();
-  }
 
-  // Add event listeners to the buttons
-  const buttons = document.querySelectorAll('.button');
-    buttons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const buttonId = button.id; // Get the ID of the button
-        playAudio(buttonId);
-      });
-    });
-  </script>
 
 </head>
 <body>
@@ -28,13 +12,13 @@
   <p> There will be a working piano here eventually! (With Sound!!) :)</p>
   <br>
   <div class="piano">
-    <button class="button button1 white-key" id="c3"><span>C/B#</span></button>
-    <button class="button button2 black-key" id="c-3"><span>C#/<br>Db</span></button>
-    <button class="button button1 white-key"><span>D</span></button>
-    <button class="button button2 black-key"><span>D#/<br>Eb</span></button>
-    <button class="button button1 white-key"><span>E/Fb</span></button>
-    <button class="button button1 white-key"><span>F</span></button>
-    <button class="button button2 black-key"><span>F#/<br>Gb</span></button>
+    <button class="button button1 white-key" id="playc3"><span>C/B#</span></button>
+    <button class="button button2 black-key" id="playc-3"><span>C#/<br>Db</span></button>
+    <button class="button button1 white-key" id="playd3"><span>D</span></button>
+    <button class="button button2 black-key" id="playd-3"><span>D#/<br>Eb</span></button>
+    <button class="button button1 white-key" id="playe3"><span>E/Fb</span></button>
+    <button class="button button1 white-key" id="playf3"><span>F</span></button>
+    <button class="button button2 black-key" id="playf-3"><span>F#/<br>Gb</span></button>
     <button class="button button1 white-key"><span>G</span></button>
     <button class="button button2 black-key"><span>G#/<br>Ab</span></button>
     <button class="button button1 white-key"><span>A</span></button>
@@ -43,8 +27,53 @@
 	<!-- Add more buttons as needed -->
   </div>
   <br>
-  <audio id="c3" src="PianoNotes\c3.mp3" hidden></audio>
-  <audio id="c-3" src="PianoNotes\c-3.mp3" hidden></audio>
+  <audio id="c3" src="PianoNotes\c3.mp3"></audio>
+  <audio id="c-3" src="PianoNotes\c-3.mp3"></audio>
+  <audio id="d3" src="PianoNotes\d3.mp3"></audio>
+  <audio id="d-3" src="PianoNotes\d-3.mp3"></audio>
+  <audio id="e3" src="PianoNotes\e3.mp3"></audio>
+  <audio id="f3" src="PianoNotes\f3.mp3"></audio>
+  <audio id="f-3" src="PianoNotes\f-3.mp3"></audio>
+
   <!-- Add more audio elements as needed -->
+  
+	<script>
+	  // Function to play audio when a button is clicked
+	  function playAudio(audioId) {
+		const audio = document.getElementById(audioId);
+		audio.currentTime = 0; // Reset audio to the beginning in case it's already playing
+		audio.play();
+	  }
+
+	  // Add event listeners to the buttons
+	  document.getElementById("playc3").addEventListener("click", function () {
+		playAudio("c3");
+	  });
+
+	  document.getElementById("playc-3").addEventListener("click", function () {
+		playAudio("c-3");
+	  });
+
+	  document.getElementById("playd3").addEventListener("click", function () {
+		playAudio("d3");
+	  });
+	  
+	  document.getElementById("playd-3").addEventListener("click", function () {
+		playAudio("d-3");
+	  });
+	  
+	  document.getElementById("playe3").addEventListener("click", function () {
+		playAudio("e3");
+	  });  
+	  
+	  document.getElementById("playf3").addEventListener("click", function () {
+		playAudio("f3");
+	  }); 
+
+	  document.getElementById("playf-3").addEventListener("click", function () {
+		playAudio("f-3");
+	  });
+	  
+	</script>
 </body>
 </html>
