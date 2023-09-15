@@ -11,6 +11,8 @@
   <br>
   <p> It works by clicking on the keys!!!! Now to add keybinds... :)</p>
   <br>
+  <p>Key Click Count: <span id="clickCount">0</span></p>
+  <br>
   <div class="piano">
     <button class="button button1 white-key" id="playc3"><span>C/B#</span></button>
     <button class="button button2 black-key" id="playc-3"><span>C#/<br>Db</span></button>
@@ -68,100 +70,93 @@
   <!-- Add more audio elements as needed -->
   
 	<script>
-	  // Function to play audio when a button is clicked
-	  function playAudio(audioId) {
-		const audio = document.getElementById(audioId);
-		audio.currentTime = 0; // Reset audio to the beginning in case it's already playing
-		audio.play();
-	  }
+	 let buttonClickCount = 0; // Initialize the click count
 
+    // Function to play audio when a button is clicked
+    function playAudio(audioId) {
+      const audio = document.getElementById(audioId);
+      audio.currentTime = 0; // Reset audio to the beginning in case it's already playing
+      audio.play();
+      updateClickCount(); // Increment and update the click count
+    }
+
+    // Function to update the click count and display it
+    function updateClickCount() {
+      buttonClickCount++;
+      const clickCountElement = document.getElementById("clickCount");
+      clickCountElement.textContent = buttonClickCount;
+    }
 	  // Add event listeners to the buttons
-	  document.getElementById("playc3").addEventListener("click", function () {
+	  document.getElementById("playc3").addEventListener("mousedown", function () {
 		playAudio("c3");
 	  });
-
-	  document.getElementById("playc-3").addEventListener("click", function () {
+	  document.getElementById("playc-3").addEventListener("mousedown", function () {
 		playAudio("c-3");
 	  });
-
-	  document.getElementById("playd3").addEventListener("click", function () {
+	  document.getElementById("playd3").addEventListener("mousedown", function () {
 		playAudio("d3");
 	  });
-	  
-	  document.getElementById("playd-3").addEventListener("click", function () {
+	  document.getElementById("playd-3").addEventListener("mousedown", function () {
 		playAudio("d-3");
 	  });
-	  
-	  document.getElementById("playe3").addEventListener("click", function () {
+	  document.getElementById("playe3").addEventListener("mousedown", function () {
 		playAudio("e3");
 	  });  
-	  
-	  document.getElementById("playf3").addEventListener("click", function () {
+	  document.getElementById("playf3").addEventListener("mousedown", function () {
 		playAudio("f3");
 	  }); 
-
-	  document.getElementById("playf-3").addEventListener("click", function () {
+	  document.getElementById("playf-3").addEventListener("mousedown", function () {
 		playAudio("f-3");
 	  });
-	  
-	  document.getElementById("playg3").addEventListener("click", function () {
+	  document.getElementById("playg3").addEventListener("mousedown", function () {
 		playAudio("g3");
 	  }); 	  
-	  
-	  document.getElementById("playg-3").addEventListener("click", function () {
+	  document.getElementById("playg-3").addEventListener("mousedown", function () {
 		playAudio("g-3");
 	  });
-	  document.getElementById("playa3").addEventListener("click", function () {
+	  document.getElementById("playa3").addEventListener("mousedown", function () {
 		playAudio("a3");
 	  });
-	  document.getElementById("playa-3").addEventListener("click", function () {
+	  document.getElementById("playa-3").addEventListener("mousedown", function () {
 		playAudio("a-3");
 	  });
-	  document.getElementById("playb3").addEventListener("click", function () {
+	  document.getElementById("playb3").addEventListener("mousedown", function () {
 		playAudio("b3");
 	  });	  
-	  document.getElementById("playc4").addEventListener("click", function () {
+	  document.getElementById("playc4").addEventListener("mousedown", function () {
 		playAudio("c4");
 	  });
-
-	  document.getElementById("playc-4").addEventListener("click", function () {
+	  document.getElementById("playc-4").addEventListener("mousedown", function () {
 		playAudio("c-4");
 	  });
-
-	  document.getElementById("playd4").addEventListener("click", function () {
+	  document.getElementById("playd4").addEventListener("mousedown", function () {
 		playAudio("d4");
 	  });
-	  
-	  document.getElementById("playd-4").addEventListener("click", function () {
+	  document.getElementById("playd-4").addEventListener("mousedown", function () {
 		playAudio("d-4");
 	  });
-	  
-	  document.getElementById("playe4").addEventListener("click", function () {
+	  document.getElementById("playe4").addEventListener("mousedown", function () {
 		playAudio("e4");
 	  });  
-	  
-	  document.getElementById("playf4").addEventListener("click", function () {
+	  document.getElementById("playf4").addEventListener("mousedown", function () {
 		playAudio("f4");
 	  }); 
-
-	  document.getElementById("playf-4").addEventListener("click", function () {
+	  document.getElementById("playf-4").addEventListener("mousedown", function () {
 		playAudio("f-4");
 	  });
-	  
-	  document.getElementById("playg4").addEventListener("click", function () {
+	  document.getElementById("playg4").addEventListener("mousedown", function () {
 		playAudio("g4");
 	  }); 	  
-	  
-	  document.getElementById("playg-4").addEventListener("click", function () {
+	  document.getElementById("playg-4").addEventListener("mousedown", function () {
 		playAudio("g-4");
 	  });
-	  document.getElementById("playa4").addEventListener("click", function () {
+	  document.getElementById("playa4").addEventListener("mousedown", function () {
 		playAudio("a4");
 	  });
-	  document.getElementById("playa-4").addEventListener("click", function () {
+	  document.getElementById("playa-4").addEventListener("mousedown", function () {
 		playAudio("a-4");
 	  });
-	  document.getElementById("playb4").addEventListener("click", function () {
+	  document.getElementById("playb4").addEventListener("mousedown", function () {
 		playAudio("b4");
 	  });	  
 	</script>
