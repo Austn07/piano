@@ -9,7 +9,7 @@
 <body>
   <h1>Ap2's Keyboard Piano</h1>
   <br>
-  <p> There will be a working piano here eventually! (With Sound!!) :)</p>
+  <p> It works by clicking on the keys!!!! Now to add keybinds... :)</p>
   <br>
   <div class="piano">
     <button class="button button1 white-key" id="playc3"><span>C/B#</span></button>
@@ -23,7 +23,20 @@
     <button class="button button2 black-key" id="playg-3"><span>G#/<br>Ab</span></button>
     <button class="button button1 white-key" id="playa3"><span>A</span></button>
     <button class="button button2 black-key" id="playa-3"><span>A#/<br>Bb</span></button>
-    <button class="button button1 white-key"><span>B</span></button>
+    <button class="button button1 white-key" id="playb3"><span>B</span></button>
+	<button class="button button1 white-key" id="playc4"><span>C/B#</span></button>
+    <button class="button button2 black-key" id="playc-4"><span>C#/<br>Db</span></button>
+    <button class="button button1 white-key" id="playd4"><span>D</span></button>
+    <button class="button button2 black-key" id="playd-4"><span>D#/<br>Eb</span></button>
+    <button class="button button1 white-key" id="playe4"><span>E/Fb</span></button>
+    <button class="button button1 white-key" id="playf4"><span>F</span></button>
+    <button class="button button2 black-key" id="playf-4"><span>F#/<br>Gb</span></button>
+    <button class="button button1 white-key" id="playg4"><span>G</span></button>
+    <button class="button button2 black-key" id="playg-4"><span>G#/<br>Ab</span></button>
+    <button class="button button1 white-key" id="playa4"><span>A</span></button>
+    <button class="button button2 black-key" id="playa-4"><span>A#/<br>Bb</span></button>
+    <button class="button button1 white-key" id="playb4"><span>B</span></button>
+
 	<!-- Add more buttons as needed -->
   </div>
   <br>
@@ -38,7 +51,19 @@
   <audio id="g-3" src="PianoNotes\g-3.mp3"></audio>
   <audio id="a3" src="PianoNotes\a3.mp3"></audio>
   <audio id="a-3" src="PianoNotes\a-3.mp3"></audio>
-  
+  <audio id="b3" src="PianoNotes\b3.mp3"></audio>
+  <audio id="c4" src="PianoNotes\c4.mp3"></audio>
+  <audio id="c-4" src="PianoNotes\c-4.mp3"></audio>
+  <audio id="d4" src="PianoNotes\d4.mp3"></audio>
+  <audio id="d-4" src="PianoNotes\d-4.mp3"></audio>
+  <audio id="e4" src="PianoNotes\e4.mp3"></audio>
+  <audio id="f4" src="PianoNotes\f4.mp3"></audio>
+  <audio id="f-4" src="PianoNotes\f-4.mp3"></audio>
+  <audio id="g4" src="PianoNotes\g4.mp3"></audio>
+  <audio id="g-4" src="PianoNotes\g-4.mp3"></audio>
+  <audio id="a4" src="PianoNotes\a4.mp3"></audio>
+  <audio id="a-4" src="PianoNotes\a-4.mp3"></audio>
+  <audio id="b4" src="PianoNotes\b4.mp3"></audio>
 
   <!-- Add more audio elements as needed -->
   
@@ -92,7 +117,53 @@
 	  document.getElementById("playa-3").addEventListener("click", function () {
 		playAudio("a-3");
 	  });
+	  document.getElementById("playb3").addEventListener("click", function () {
+		playAudio("b3");
+	  });	  
+	  document.getElementById("playc4").addEventListener("click", function () {
+		playAudio("c4");
+	  });
+
+	  document.getElementById("playc-4").addEventListener("click", function () {
+		playAudio("c-4");
+	  });
+
+	  document.getElementById("playd4").addEventListener("click", function () {
+		playAudio("d4");
+	  });
 	  
+	  document.getElementById("playd-4").addEventListener("click", function () {
+		playAudio("d-4");
+	  });
+	  
+	  document.getElementById("playe4").addEventListener("click", function () {
+		playAudio("e4");
+	  });  
+	  
+	  document.getElementById("playf4").addEventListener("click", function () {
+		playAudio("f4");
+	  }); 
+
+	  document.getElementById("playf-4").addEventListener("click", function () {
+		playAudio("f-4");
+	  });
+	  
+	  document.getElementById("playg4").addEventListener("click", function () {
+		playAudio("g4");
+	  }); 	  
+	  
+	  document.getElementById("playg-4").addEventListener("click", function () {
+		playAudio("g-4");
+	  });
+	  document.getElementById("playa4").addEventListener("click", function () {
+		playAudio("a4");
+	  });
+	  document.getElementById("playa-4").addEventListener("click", function () {
+		playAudio("a-4");
+	  });
+	  document.getElementById("playb4").addEventListener("click", function () {
+		playAudio("b4");
+	  });	  
 	</script>
 </body>
 </html>
