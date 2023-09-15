@@ -1,5 +1,8 @@
 body {
-  background-color: #000000;
+  background-image: linear-gradient(#F4959D, #C4FFFD), url("../assets/img/AP2bg.png"); /* background color and background picture*/
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 h1 {
@@ -37,17 +40,114 @@ table {
   color: cyan;
 }
 
+/* Define the basic styles for piano keys */
+.piano {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px; /* Gap between keys */
+}
+
+.white-key,
+.black-key {
+  position: relative;
+}
+
+.white-key {
+  background-color: #c4fffd; /* super light blue */
+  margin-right: 1px; /* Adjust margin for white keys */
+}
+
+.black-key {
+  background-color: #760e17; /* darkish red */
+  z-index: 1;
+}
+
+/* Position black keys on top of the white keys */
+.black-key:nth-child(2),
+.black-key:nth-child(4),
+.black-key:nth-child(7),
+.black-key:nth-child(9),
+.black-key:nth-child(11),
+.black-key:nth-child(14),
+.black-key:nth-child(16),
+.black-key:nth-child(19),
+.black-key:nth-child(21),
+.black-key:nth-child(23),
+.black-key:nth-child(26),
+.black-key:nth-child(28),
+.black-key:nth-child(31),
+.black-key:nth-child(33),
+.black-key:nth-child(35),
+.black-key:nth-child(38),
+.black-key:nth-child(40),
+.black-key:nth-child(43),
+.black-key:nth-child(45),
+.black-key:nth-child(47)
+ {
+  margin-left: -18px;
+  margin-right: -18px; /* Remove the margin on the right side of the black keys */
+}
+
+
+/* Button Styles */
 .button {
-  border: none;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
+  position: relative;
 }
 
-.button1 {background-color: #4CAF50;} /* Green */
-.button2 {background-color: #008CBA;} /* Blue */
+.button1 {
+  background-color: #c4fffd; /* super light blue */
+  color: black;
+  border: 2px solid #91d9d7;
+  box-shadow: 0 15px #263232;
+  width: 50px;
+  height: 200px;
+  display: flex; /* Use flexbox to control text alignment */
+  flex-direction: column; /* Stack text vertically */
+  justify-content: flex-end; /* Align text to the bottom */
+  align-items: center; /* Center text horizontally */
+}
+
+.button1 span {
+  /* You can wrap the text in a <span> element to style it separately */
+  margin-bottom: 10px; /* Adjust the margin to control vertical spacing */
+}
+
+.button1:hover {
+  background-color: #91d9d7;
+  color: black;
+  border: 2px solid #91d9d7;
+}
+
+.button1:active {
+  background-color: #c4fffd;
+  box-shadow: 0 7px #263232;
+  transform: translateY(8px);
+}
+
+.button2 {
+  background-color: #760e17; /* darkish red */
+  color: white;
+  border: 2px solid #3b1018;
+  box-shadow: 0 15px #230a0e;
+  width: 35px;
+  height: 125px;
+}
+
+.button2:hover {
+  background-color: #3b1018;
+  color: white;
+  border: 2px solid #3b1018;
+}
+
+.button2:active {
+  background-color: #760e17;
+  box-shadow: 0 7px #230a0e;
+  transform: translateY(8px);
+}
+
+/* Add more button styles as needed */
