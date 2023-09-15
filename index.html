@@ -19,10 +19,10 @@
     <button class="button button1 white-key" id="playe3"><span>E/Fb</span></button>
     <button class="button button1 white-key" id="playf3"><span>F</span></button>
     <button class="button button2 black-key" id="playf-3"><span>F#/<br>Gb</span></button>
-    <button class="button button1 white-key"><span>G</span></button>
-    <button class="button button2 black-key"><span>G#/<br>Ab</span></button>
-    <button class="button button1 white-key"><span>A</span></button>
-    <button class="button button2 black-key"><span>A#/<br>Bb</span></button>
+    <button class="button button1 white-key" id="playg3"><span>G</span></button>
+    <button class="button button2 black-key" id="playg-3"><span>G#/<br>Ab</span></button>
+    <button class="button button1 white-key" id="playa3"><span>A</span></button>
+    <button class="button button2 black-key" id="playa-3"><span>A#/<br>Bb</span></button>
     <button class="button button1 white-key"><span>B</span></button>
 	<!-- Add more buttons as needed -->
   </div>
@@ -34,6 +34,11 @@
   <audio id="e3" src="PianoNotes\e3.mp3"></audio>
   <audio id="f3" src="PianoNotes\f3.mp3"></audio>
   <audio id="f-3" src="PianoNotes\f-3.mp3"></audio>
+  <audio id="g3" src="PianoNotes\g3.mp3"></audio>
+  <audio id="g-3" src="PianoNotes\g-3.mp3"></audio>
+  <audio id="a3" src="PianoNotes\a3.mp3"></audio>
+  <audio id="a-3" src="PianoNotes\a-3.mp3"></audio>
+  
 
   <!-- Add more audio elements as needed -->
   
@@ -72,6 +77,20 @@
 
 	  document.getElementById("playf-3").addEventListener("click", function () {
 		playAudio("f-3");
+	  });
+	  
+	  document.getElementById("playg3").addEventListener("click", function () {
+		playAudio("g3");
+	  }); 	  
+	  
+	  document.getElementById("playg-3").addEventListener("click", function () {
+		playAudio("g-3");
+	  });
+	  document.getElementById("playa3").addEventListener("click", function () {
+		playAudio("a3");
+	  });
+	  document.getElementById("playa-3").addEventListener("click", function () {
+		playAudio("a-3");
 	  });
 	  
 	</script>
