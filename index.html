@@ -3,17 +3,16 @@
 <head>
   <title>Ap2's Keyboard Piano!</title>
   <link href='./styles.css' rel='stylesheet'>
-
-
 </head>
 <body>
   <h1>Ap2's Keyboard Piano</h1>
   <br>
-  <p> It works by clicking on the keys!!!! Now to add keybinds... :)</p>
+  <p> It works by clicking on the keys or using the keyboard!</p>
   <br>
   <p>Key Click Count: <span id="clickCount">0</span></p>
   <br>
   <div class="piano">
+    <!-- Add your buttons with both "mousedown" and "keydown" event listeners -->
     <button class="button button1 white-key" id="playc3"><span>C/B#</span></button>
     <button class="button button2 black-key" id="playc-3"><span>C#/<br>Db</span></button>
     <button class="button button1 white-key" id="playd3"><span>D</span></button>
@@ -26,7 +25,7 @@
     <button class="button button1 white-key" id="playa3"><span>A</span></button>
     <button class="button button2 black-key" id="playa-3"><span>A#/<br>Bb</span></button>
     <button class="button button1 white-key" id="playb3"><span>B</span></button>
-	<button class="button button1 white-key" id="playc4"><span>C/B#</span></button>
+    <button class="button button1 white-key" id="playc4"><span>C/B#</span></button>
     <button class="button button2 black-key" id="playc-4"><span>C#/<br>Db</span></button>
     <button class="button button1 white-key" id="playd4"><span>D</span></button>
     <button class="button button2 black-key" id="playd-4"><span>D#/<br>Eb</span></button>
@@ -38,10 +37,10 @@
     <button class="button button1 white-key" id="playa4"><span>A</span></button>
     <button class="button button2 black-key" id="playa-4"><span>A#/<br>Bb</span></button>
     <button class="button button1 white-key" id="playb4"><span>B</span></button>
-
-	<!-- Add more buttons as needed -->
+    <!-- Add more buttons as needed -->
   </div>
   <br>
+  <!-- Add your audio elements here as before -->
   <audio id="c3" src="PianoNotes\c3.mp3"></audio>
   <audio id="c-3" src="PianoNotes\c-3.mp3"></audio>
   <audio id="d3" src="PianoNotes\d3.mp3"></audio>
@@ -69,8 +68,8 @@
 
   <!-- Add more audio elements as needed -->
   
-	<script>
-	 let buttonClickCount = 0; // Initialize the click count
+  <script>
+    let buttonClickCount = 0; // Initialize the click count
 
     // Function to play audio when a button is clicked
     function playAudio(audioId) {
@@ -86,79 +85,116 @@
       const clickCountElement = document.getElementById("clickCount");
       clickCountElement.textContent = buttonClickCount;
     }
-	  // Add event listeners to the buttons
-	  document.getElementById("playc3").addEventListener("mousedown", function () {
-		playAudio("c3");
-	  });
-	  document.getElementById("playc-3").addEventListener("mousedown", function () {
-		playAudio("c-3");
-	  });
-	  document.getElementById("playd3").addEventListener("mousedown", function () {
-		playAudio("d3");
-	  });
-	  document.getElementById("playd-3").addEventListener("mousedown", function () {
-		playAudio("d-3");
-	  });
-	  document.getElementById("playe3").addEventListener("mousedown", function () {
-		playAudio("e3");
-	  });  
-	  document.getElementById("playf3").addEventListener("mousedown", function () {
-		playAudio("f3");
-	  }); 
-	  document.getElementById("playf-3").addEventListener("mousedown", function () {
-		playAudio("f-3");
-	  });
-	  document.getElementById("playg3").addEventListener("mousedown", function () {
-		playAudio("g3");
-	  }); 	  
-	  document.getElementById("playg-3").addEventListener("mousedown", function () {
-		playAudio("g-3");
-	  });
-	  document.getElementById("playa3").addEventListener("mousedown", function () {
-		playAudio("a3");
-	  });
-	  document.getElementById("playa-3").addEventListener("mousedown", function () {
-		playAudio("a-3");
-	  });
-	  document.getElementById("playb3").addEventListener("mousedown", function () {
-		playAudio("b3");
-	  });	  
-	  document.getElementById("playc4").addEventListener("mousedown", function () {
-		playAudio("c4");
-	  });
-	  document.getElementById("playc-4").addEventListener("mousedown", function () {
-		playAudio("c-4");
-	  });
-	  document.getElementById("playd4").addEventListener("mousedown", function () {
-		playAudio("d4");
-	  });
-	  document.getElementById("playd-4").addEventListener("mousedown", function () {
-		playAudio("d-4");
-	  });
-	  document.getElementById("playe4").addEventListener("mousedown", function () {
-		playAudio("e4");
-	  });  
-	  document.getElementById("playf4").addEventListener("mousedown", function () {
-		playAudio("f4");
-	  }); 
-	  document.getElementById("playf-4").addEventListener("mousedown", function () {
-		playAudio("f-4");
-	  });
-	  document.getElementById("playg4").addEventListener("mousedown", function () {
-		playAudio("g4");
-	  }); 	  
-	  document.getElementById("playg-4").addEventListener("mousedown", function () {
-		playAudio("g-4");
-	  });
-	  document.getElementById("playa4").addEventListener("mousedown", function () {
-		playAudio("a4");
-	  });
-	  document.getElementById("playa-4").addEventListener("mousedown", function () {
-		playAudio("a-4");
-	  });
-	  document.getElementById("playb4").addEventListener("mousedown", function () {
-		playAudio("b4");
-	  });	  
-	</script>
+
+    // Add "mousedown" event listeners to the buttons
+    document.getElementById("playc3").addEventListener("mousedown", function () {
+      playAudio("c3");
+    });
+    document.getElementById("playc-3").addEventListener("mousedown", function () {
+      playAudio("c-3");
+    });
+    document.getElementById("playd3").addEventListener("mousedown", function () {
+      playAudio("d3");
+    });
+    document.getElementById("playd-3").addEventListener("mousedown", function () {
+      playAudio("d-3");
+    });
+    document.getElementById("playe3").addEventListener("mousedown", function () {
+      playAudio("e3");
+    });  
+    document.getElementById("playf3").addEventListener("mousedown", function () {
+      playAudio("f3");
+    }); 
+    document.getElementById("playf-3").addEventListener("mousedown", function () {
+      playAudio("f-3");
+    });
+    document.getElementById("playg3").addEventListener("mousedown", function () {
+      playAudio("g3");
+    });   
+    document.getElementById("playg-3").addEventListener("mousedown", function () {
+      playAudio("g-3");
+    });
+    document.getElementById("playa3").addEventListener("mousedown", function () {
+      playAudio("a3");
+    });
+    document.getElementById("playa-3").addEventListener("mousedown", function () {
+      playAudio("a-3");
+    });
+    document.getElementById("playb3").addEventListener("mousedown", function () {
+      playAudio("b3");
+    });   
+    document.getElementById("playc4").addEventListener("mousedown", function () {
+      playAudio("c4");
+    });
+    document.getElementById("playc-4").addEventListener("mousedown", function () {
+      playAudio("c-4");
+    });
+    document.getElementById("playd4").addEventListener("mousedown", function () {
+      playAudio("d4");
+    });
+    document.getElementById("playd-4").addEventListener("mousedown", function () {
+      playAudio("d-4");
+    });
+    document.getElementById("playe4").addEventListener("mousedown", function () {
+      playAudio("e4");
+    });  
+    document.getElementById("playf4").addEventListener("mousedown", function () {
+      playAudio("f4");
+    }); 
+    document.getElementById("playf-4").addEventListener("mousedown", function () {
+      playAudio("f-4");
+    });
+    document.getElementById("playg4").addEventListener("mousedown", function () {
+      playAudio("g4");
+    });   
+    document.getElementById("playg-4").addEventListener("mousedown", function () {
+      playAudio("g-4");
+    });
+    document.getElementById("playa4").addEventListener("mousedown", function () {
+      playAudio("a4");
+    });
+    document.getElementById("playa-4").addEventListener("mousedown", function () {
+      playAudio("a-4");
+    });
+    document.getElementById("playb4").addEventListener("mousedown", function () {
+      playAudio("b4");
+    });    
+
+    // Add "keydown" event listeners for the corresponding keys
+    document.addEventListener("keydown", function (event) {
+      // Map keyboard keys to button IDs, e.g., 'q' key corresponds to 'playc3'
+      const keyMappings = {
+        'q': 'playc3',
+        '2': 'playc-3',
+        'w': 'playd3',
+        '3': 'playd-3',
+        'e': 'playe3',
+        'r': 'playf3',
+        '5': 'playf-3',
+        't': 'playg3',
+        '6': 'playg-3',
+        'y': 'playa3',
+        '7': 'playa-3',
+        'u': 'playb3',
+        'i': 'playc4',
+        '9': 'playc-4',
+        'o': 'playd4',
+        '0': 'playd-4',
+        'p': 'playe4',
+        '[': 'playf4',
+        '=': 'playf-4',
+        ']': 'playg4',
+        '\\': 'playg-4',
+        'a': 'playa4',
+        'z': 'playa-4',
+        's': 'playb4',
+      };
+
+      const audioId = keyMappings[event.key.toLowerCase()];
+      if (audioId) {
+        playAudio(audioId);
+      }
+    });
+  </script>
 </body>
 </html>
