@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(#F4959D, #C4FFFD), url("../assets/img/AP2bg.png"); /* background color and background picture*/
+  background-image: linear-gradient(#F4959D, #C4FFFD); /* background color and background picture*/
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
