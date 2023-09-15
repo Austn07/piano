@@ -3,6 +3,24 @@
 <head>
   <title>Ap2's Keyboard Piano!</title>
   <link href='./styles.css' rel='stylesheet'>
+  <script>
+  // Function to play audio when a button is clicked
+  function playAudio(buttonId) {
+    const audio = document.getElementById(buttonId);
+    audio.currentTime = 0; // Reset audio to the beginning in case it's already playing
+    audio.play();
+  }
+
+  // Add event listeners to the buttons
+  const buttons = document.querySelectorAll('.button');
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const buttonId = button.id; // Get the ID of the button
+        playAudio(buttonId);
+      });
+    });
+  </script>
+
 </head>
 <body>
   <h1>Ap2's Keyboard Piano</h1>
@@ -10,8 +28,8 @@
   <p> There will be a working piano here eventually! (With Sound!!) :)</p>
   <br>
   <div class="piano">
-    <button class="button button1 white-key"><span>C/B#</span></button>
-    <button class="button button2 black-key"><span>C#/<br>Db</span></button>
+    <button class="button button1 white-key" id="c3"><span>C/B#</span></button>
+    <button class="button button2 black-key" id="c-3"><span>C#/<br>Db</span></button>
     <button class="button button1 white-key"><span>D</span></button>
     <button class="button button2 black-key"><span>D#/<br>Eb</span></button>
     <button class="button button1 white-key"><span>E/Fb</span></button>
@@ -22,44 +40,11 @@
     <button class="button button1 white-key"><span>A</span></button>
     <button class="button button2 black-key"><span>A#/<br>Bb</span></button>
     <button class="button button1 white-key"><span>B</span></button>
-	<button class="button button1 white-key"><span>C/B#</span></button>
-    <button class="button button2 black-key"><span>C#/<br>Db</span></button>
-    <button class="button button1 white-key"><span>D</span></button>
-    <button class="button button2 black-key"><span>D#/<br>Eb</span></button>
-    <button class="button button1 white-key"><span>E/Fb</span></button>
-    <button class="button button1 white-key"><span>F</span></button>
-    <button class="button button2 black-key"><span>F#/<br>Gb</span></button>
-    <button class="button button1 white-key"><span>G</span></button>
-    <button class="button button2 black-key"><span>G#/<br>Ab</span></button>
-    <button class="button button1 white-key"><span>A</span></button>
-    <button class="button button2 black-key"><span>A#/<br>Bb</span></button>
-    <button class="button button1 white-key"><span>B</span></button>
-	<button class="button button1 white-key"><span>C/B#</span></button>
-    <button class="button button2 black-key"><span>C#/<br>Db</span></button>
-    <button class="button button1 white-key"><span>D</span></button>
-    <button class="button button2 black-key"><span>D#/<br>Eb</span></button>
-    <button class="button button1 white-key"><span>E/Fb</span></button>
-    <button class="button button1 white-key"><span>F</span></button>
-    <button class="button button2 black-key"><span>F#/<br>Gb</span></button>
-    <button class="button button1 white-key"><span>G</span></button>
-    <button class="button button2 black-key"><span>G#/<br>Ab</span></button>
-    <button class="button button1 white-key"><span>A</span></button>
-    <button class="button button2 black-key"><span>A#/<br>Bb</span></button>
-    <button class="button button1 white-key"><span>B</span></button>
-	<button class="button button1 white-key"><span>C/B#</span></button>
-    <button class="button button2 black-key"><span>C#/<br>Db</span></button>
-    <button class="button button1 white-key"><span>D</span></button>
-    <button class="button button2 black-key"><span>D#/<br>Eb</span></button>
-    <button class="button button1 white-key"><span>E/Fb</span></button>
-    <button class="button button1 white-key"><span>F</span></button>
-    <button class="button button2 black-key"><span>F#/<br>Gb</span></button>
-    <button class="button button1 white-key"><span>G</span></button>
-    <button class="button button2 black-key"><span>G#/<br>Ab</span></button>
-    <button class="button button1 white-key"><span>A</span></button>
-    <button class="button button2 black-key"><span>A#/<br>Bb</span></button>
-    <button class="button button1 white-key"><span>B</span></button>
-    <!-- Repeat the keys as needed -->
+	<!-- Add more buttons as needed -->
   </div>
   <br>
+  <audio id="c3" src="C:\Users\austi\OneDrive\Documents\GitHub\piano\Piano notes\c3.mp3" hidden></audio>
+  <audio id="c-3" src="C:\Users\austi\OneDrive\Documents\GitHub\piano\Piano notes\c-3.mp3" hidden></audio>
+  <!-- Add more audio elements as needed -->
 </body>
 </html>
